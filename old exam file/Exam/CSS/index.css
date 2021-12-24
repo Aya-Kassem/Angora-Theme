@@ -1,0 +1,439 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLING START */
+:root {
+    --main-color: #f25454;
+}
+html {
+    scroll-behavior: smooth !important;
+}
+.header h1 {
+    font-size: 5rem;
+    color: rgba(102,102,102, .2)
+}
+.header h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: #212529;
+}
+.header h1, h2 {
+    font-weight: 700;
+}
+.header::after{
+    content: "";
+    display: inline-block;
+    width: 3rem;
+    height: 1px;
+    background-color: #212529;
+    position: absolute;
+    bottom: 11%;
+    transition: all .5s ease-in-out;
+}
+.header:hover::after {
+    width: 5rem;
+}
+.intro-para {
+    color: #999;
+    font-size: 18px
+}
+#about .about-paragraph p,
+#team .memeber-box span,
+#services .services-box p {
+    color: #666;
+}
+/* GENERAL STYLING END */
+
+/* NAVBAR START */
+.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navbar .nav-item .nav-link,
+.navbar .social-icons li a i,
+#team .social-icons li a i {
+    color: white;
+}
+.navbar .nav-item .nav-link {
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 500;
+}
+#logo-dark {
+    display: none;
+}
+#logo-light {
+    display: block;
+}
+.myNav .nav-item .nav-link,
+.myNav .social-icons li a i {
+    color: #000 !important;
+}
+.navbar .nav-item .nav-link:hover, 
+.navbar .nav-item .nav-link.active,
+.navbar .social-icons li a i:hover,
+.myNav .nav-link.active, 
+.myNav .nav-link:hover,
+#team .memeber-box:hover h5,
+#services .services-box:hover h3,
+#contact .consultants ul li:hover h4,
+.info .map-bg a:hover,
+footer .social-icons li a i:hover,
+footer a:hover{
+    color: var(--main-color) !important;
+}
+.nav-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px;
+}
+.myNav .nav-icon {
+    background-color: #000;
+}
+.navbar .navbar-toggler {
+    border: 0;
+    border-radius: 0;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+/* NAVBAR END */
+
+
+
+/* MAIN SECTION START */
+#main{
+    height: 100vh;
+}
+#main > section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+#main .section-1 {
+    background-image: url(../Images/slideshow-1.jpg);
+}
+#main .section-2 {
+    background-image: url(../Images/slideshow-2.jpg);
+}
+#main .section-3 {
+    background-image: url(../Images/slideshow-3.jpg);
+}
+#main h1 {
+    font-weight: 700;
+    font-size: 70px;
+}
+#main .down {
+    width: 26px;
+    height: 45px;
+    bottom: 8%;
+    border: 1px solid #fff;
+    border-radius: 13px;
+}
+#main .down:hover {
+    border: 1px solid var(--main-color);
+}
+#main .down .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 10%;
+    transition: all .3s ease-in-out;
+
+    animation: dot-down 1.5s infinite ease-in-out;
+
+}
+#main .down:hover .dot{
+    background-color: var(--main-color);
+}
+@keyframes dot-down {
+    from {
+        top: 8px;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+.setting-container {
+    background-color: #2b2424;
+    width: 40px;
+    height: 40px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    top: 18%;
+    left: 0;
+    transition: all .5s ease-in-out;
+}
+/* MAIN SECTION END */
+
+
+/* ABOUT SECTION START */
+#about .about-paragraph p {
+    font-size: 15px;
+    line-height: 1.86;
+}
+
+#about .progress-bars h5 {
+    font-size: 16px;
+}
+#about .progress {
+    height: 4px;
+}
+#about .progress-bar {
+    background-color: var(--main-color);
+}
+/* ABOUT SECTION END */
+
+
+/* TEAM SECTIN START */
+#team .memeber-box .member-box-child{
+    overflow: hidden;
+}
+#team .memeber-box h5 {
+    font-size: 18px;
+}
+#team .memeber-box .social-bg,
+#team .ideas-offer a:hover,
+#contact form a:hover{
+    background-color: rgba(242,84,84, .8);
+}
+#team .memeber-box .social-bg {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+#team .memeber-box:hover img {
+    transform: scale(1.2);
+}
+#team .memeber-box:hover .social-bg{
+    opacity: 1;
+    visibility: visible;
+}
+#team .memeber-box .member-box-child img {
+    transition: transform .5s ease-in-out;
+}
+#team .ideas-offer h3 {
+    font-size: 35px;
+    font-weight: 400;
+}
+#team .ideas-offer a,
+#contact form a {
+    background-color: var(--main-color);
+    padding: 12px 25px;
+    font-weight: 500;
+}
+/* TEAM SECTIN END */
+
+/* SERVICES SECTION START */
+#services,
+#contact {
+    background-color: #fafafa;
+}
+#services .services-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+}
+#services .services-box i,
+#contact .consultants ul li i {
+    font-size: 35px;
+    color: var(--main-color);
+}
+#services .services-box p {
+    font-size: 15px;
+}
+/* SERVICES SECTION END */
+
+
+/* CLIENTS SECTION START */
+.client-info {
+    width: 60%;
+    margin: auto;
+}
+.slider-for .client-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+.client-paragraph span {
+    font-size: 30px;
+}
+.client-paragraph i {
+    font-size: 25px;
+}
+.client-paragraph span,
+.client-paragraph i {
+    color: #666;
+}
+.client-item {
+    width: 100px;
+}
+.slider-nav .client-item img {
+    opacity: .5;
+    width: 75%;
+    margin: auto;
+}
+.slider-nav .slick-current img{
+    opacity: 1;
+    width: 100%;
+}
+/* CLIENTS SECTION END */
+
+
+
+/* CONTACT SECTION START */
+#contact .consultants h3 {
+    font-size: 33px;
+    font-weight: 700;
+}
+#contact .consultants h4 {
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+}
+#contact .consultants ul li i {
+    font-size: 40px;
+}
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+    font-size: 15px;
+    color:rgba(102,102,102, .4);
+    font-weight: 500;
+}
+form input, 
+form textarea {
+    border: 3px solid #eee;
+    color: #a6a6a6;
+}
+.form-control-lg {
+    border-radius: 2px;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: var(--main-color);
+    outline: 0;
+    box-shadow: none;
+}
+/* CONTACT SECTION END */
+
+
+/* INFO SECTION START */
+.info {
+    background-color: #222;
+}
+.info .map-bg a {
+    text-decoration: none;
+    color: #b0b0b0;
+}
+.info .map-bg {
+    background-image: url(../Images/1280px-World_map_with_points.svg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    color: #b0b0b0;
+}
+.info .map-bg h5 {
+    font-size: 23px;
+}
+.info .map-bg .popular-tags .btn {
+    color: #B0B0B0;
+    border: 1px solid #b0b0b0;
+    font-size: 14px;
+}
+.info .map-bg .popular-tags .btn:hover {
+    border: 1px solid var(--main-color);
+}
+/* INFO SECTION END */
+
+/* FOOTER SECTION START */
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    color: #b0b0b0;
+
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+/* FOOTER SECTION END */
+
+
+/* BACK TO TOP BUTTON */
+.back-to-top {
+    text-decoration: none;
+    top: -25px;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: var(--main-color);
+    opacity: .5;
+    width: 50px;
+    height: 50px;
+
+    transition: background .5s ease-in-out;
+}
+.back-to-top:hover {
+    opacity: 1;
+}
+.back-to-top i {
+    font-size: 18px;
+    font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+    #main h1 {
+        font-size: 40px;
+    }
+    .navbar {
+        z-index: 999;
+    }
+    .navbar .navbar-collapse {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 97%;
+        background-color: #fff;
+    }
+    .navbar .navbar-nav ul li {
+        display: block;
+    }
+    .navbar .nav-item .nav-link {
+        color: #000;
+    }
+    #team .ideas-offer a {
+        padding: 8px 20px;
+    }
+    .client-info {
+        width: 90%;
+        margin: auto;
+    }
+    .client-paragraph span {
+        font-size: 25px;
+    }
+    .client-paragraph i {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 992px) {
+    #contact .consultants h3 {
+        font-size: 20px ;
+    }
+    #contact .consultants h4 {
+        font-size: 15px;
+    }
+    #contact .consultants ul li i {
+        font-size: 30px;
+    }
+}
